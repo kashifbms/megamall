@@ -6,5 +6,6 @@
 
 /wp-content/debug.log
 /wp-content/uploads/debug.log
+wp-config.php
 /.idea/
 # WordPress core files

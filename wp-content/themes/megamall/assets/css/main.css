@@ -703,6 +703,13 @@ header.single_tenant_header .mm-menu li a {
         background-image: none !important;
         padding-top: 20px;
     }
+    .mm-tenant-layout{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .mm-tenant-sidebar{
+        padding-left: 0;
+    }
 }
 .full_width_image{
     margin-top: 80px;
