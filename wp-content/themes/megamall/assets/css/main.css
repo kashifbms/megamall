@@ -288,6 +288,9 @@ header.single_tenant_header .mm-menu li a {
     .mm-header-nav.active {
         display: block;
     }
+    .mm-header-nav.active .mm-menu li a{
+        color: #000;
+    }
 
     .mm-menu {
         flex-direction: column;
