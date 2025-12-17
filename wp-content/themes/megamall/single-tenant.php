@@ -128,7 +128,7 @@ $offers = new WP_Query([
             <?php while ($offers->have_posts()): $offers->the_post(); ?>
 
                 <article class="mm-offer-card">
-                    <a href="<?php the_permalink(); ?>">
+                    <a href="#">
 
                         <?php if (has_post_thumbnail()): ?>
                             <div class="mm-offer-image">
