@@ -1,0 +1,283 @@
+[
+    {
+        "key": "group_tenant_details",
+        "title": "Tenant Details",
+        "fields": [
+            {
+                "key": "field_tenant_header_image",
+                "label": "Header Image",
+                "name": "tenant_header_image",
+                "type": "image",
+                "return_format": "id",
+                "preview_size": "medium",
+                "library": "all",
+                "parent": "group_tenant_details"
+            },
+            {
+                "key": "field_tenant_carousel_images",
+                "label": "Carousel Images",
+                "name": "tenant_carousel_images",
+                "type": "gallery",
+                "return_format": "array",
+                "preview_size": "medium",
+                "parent": "group_tenant_details"
+            },
+            {
+                "key": "field_tenant_phone",
+                "label": "Phone Number",
+                "name": "tenant_phone",
+                "type": "text",
+                "parent": "group_tenant_details"
+            },
+            {
+                "key": "field_tenant_email",
+                "label": "Email Address",
+                "name": "tenant_email",
+                "type": "email",
+                "parent": "group_tenant_details"
+            },
+            {
+                "key": "field_tenant_floor",
+                "label": "Floor Level",
+                "name": "tenant_floor",
+                "type": "text",
+                "parent": "group_tenant_details"
+            },
+            {
+                "key": "field_tenant_shop_number",
+                "label": "Shop Number",
+                "name": "tenant_shop_number",
+                "type": "text",
+                "parent": "group_tenant_details"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "tenant"
+                }
+            ]
+        ],
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "active": true
+    },
+    {
+        "key": "group_offer_details",
+        "title": "Offer Details",
+        "fields": [
+            {
+                "key": "field_offer_expiry_date",
+                "label": "Offer Expiry Date",
+                "name": "offer_expiry_date",
+                "type": "date_picker",
+                "display_format": "Y-m-d",
+                "return_format": "Y-m-d",
+                "parent": "group_offer_details"
+            },
+            {
+                "key": "field_offer_tenant",
+                "label": "Related Tenant",
+                "name": "offer_tenant",
+                "type": "post_object",
+                "post_type": ["tenant"],
+                "return_format": "id",
+                "multiple": 0,
+                "parent": "group_offer_details"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "offer"
+                }
+            ]
+        ],
+        "position": "normal",
+        "style": "default",
+        "active": true
+    },
+    {
+        "key": "group_event_details",
+        "title": "Event Details",
+        "fields": [
+            {
+                "key": "field_event_start_date",
+                "label": "Start Date",
+                "name": "event_start_date",
+                "type": "date_picker",
+                "display_format": "Y-m-d",
+                "return_format": "Y-m-d",
+                "parent": "group_event_details"
+            },
+            {
+                "key": "field_event_end_date",
+                "label": "End Date",
+                "name": "event_end_date",
+                "type": "date_picker",
+                "display_format": "Y-m-d",
+                "return_format": "Y-m-d",
+                "parent": "group_event_details"
+            },
+            {
+                "key": "field_event_start_time",
+                "label": "Start Time",
+                "name": "event_start_time",
+                "type": "text",
+                "parent": "group_event_details"
+            },
+            {
+                "key": "field_event_end_time",
+                "label": "End Time",
+                "name": "event_end_time",
+                "type": "text",
+                "parent": "group_event_details"
+            },
+            {
+                "key": "field_event_location",
+                "label": "Event Location",
+                "name": "event_location",
+                "type": "text",
+                "parent": "group_event_details"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "event"
+                }
+            ]
+        ],
+        "position": "normal",
+        "active": true
+    },
+    {
+        "key": "group_service_details",
+        "title": "Service Details",
+        "fields": [
+            {
+                "key": "field_service_icon",
+                "label": "Service Icon",
+                "name": "service_icon",
+                "type": "image",
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "parent": "group_service_details"
+            },
+            {
+                "key": "field_service_location",
+                "label": "Location (Optional)",
+                "name": "service_location",
+                "type": "text",
+                "parent": "group_service_details"
+            },
+            {
+                "key": "field_service_hours",
+                "label": "Hours (Optional)",
+                "name": "service_hours",
+                "type": "text",
+                "parent": "group_service_details"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "service"
+                }
+            ]
+        ],
+        "position": "normal",
+        "active": true
+    },
+    {
+        "key": "group_mall_settings",
+        "title": "Mall Settings",
+        "fields": [
+            {
+                "key": "field_mall_name",
+                "label": "Mall Name",
+                "name": "mall_name",
+                "type": "text",
+                "parent": "group_mall_settings"
+            },
+            {
+                "key": "field_mall_address",
+                "label": "Mall Address",
+                "name": "mall_address",
+                "type": "textarea",
+                "parent": "group_mall_settings"
+            },
+            {
+                "key": "field_mall_phone",
+                "label": "Mall Phone",
+                "name": "mall_phone",
+                "type": "text",
+                "parent": "group_mall_settings"
+            },
+            {
+                "key": "field_mall_email",
+                "label": "Mall Email",
+                "name": "mall_email",
+                "type": "email",
+                "parent": "group_mall_settings"
+            },
+            {
+                "key": "field_mall_hours",
+                "label": "Opening Hours",
+                "name": "mall_hours",
+                "type": "text",
+                "parent": "group_mall_settings"
+            },
+            {
+                "key": "field_mall_map_embed",
+                "label": "Google Map Embed",
+                "name": "mall_map_embed",
+                "type": "textarea",
+                "parent": "group_mall_settings"
+            },
+            {
+                "key": "field_mall_facebook",
+                "label": "Facebook Link",
+                "name": "mall_facebook",
+                "type": "url",
+                "parent": "group_mall_settings"
+            },
+            {
+                "key": "field_mall_instagram",
+                "label": "Instagram Link",
+                "name": "mall_instagram",
+                "type": "url",
+                "parent": "group_mall_settings"
+            },
+            {
+                "key": "field_mall_youtube",
+                "label": "YouTube Link",
+                "name": "mall_youtube",
+                "type": "url",
+                "parent": "group_mall_settings"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "mall-settings"
+                }
+            ]
+        ],
+        "position": "normal",
+        "active": true
+    }
+]

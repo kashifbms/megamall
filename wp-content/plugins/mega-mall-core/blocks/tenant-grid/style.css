@@ -1,0 +1,14 @@
+.megamall-tenant-grid {
+    margin: 20px 0;
+}
+
+.tenant-grid-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.tenant-card {
+    text-align: center;
+    padding: 15px;
+}

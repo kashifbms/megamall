@@ -1,0 +1,13 @@
+{
+  "apiVersion": 2,
+  "name": "megamall/tenant-grid",
+  "title": "Tenants Grid",
+  "category": "design",
+  "attributes": {
+    "postsPerPage": {
+      "type": "number",
+      "default": 12
+    }
+  },
+  "editorScript": "megamall-blocks"
+}

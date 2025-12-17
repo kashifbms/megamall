@@ -1,0 +1,13 @@
+{
+  "apiVersion": 2,
+  "name": "megamall/tenant-details",
+  "title": "Tenant Details",
+  "category": "theme",
+  "icon": "id",
+  "description": "Displays ACF tenant fields on single tenant pages.",
+  "supports": {
+    "html": false
+  },
+  "render": "file:./render.php",
+  "style": "file:./style.css"
+}

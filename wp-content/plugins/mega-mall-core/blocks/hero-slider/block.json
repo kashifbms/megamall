@@ -1,0 +1,47 @@
+{
+  "apiVersion": 2,
+  "name": "megamall/hero-slider",
+  "title": "Hero Slider",
+  "category": "design",
+  "icon": "images-alt2",
+  "description": "Full-screen hero slider with per-slide artwork and optional info box.",
+  "supports": {
+    "html": false,
+    "inserter": true
+  },
+  "attributes": {
+  "slides": {
+    "type": "array",
+    "default": []
+  },
+  "autoplay": {
+    "type": "boolean",
+    "default": true
+  },
+  "speed": {
+    "type": "number",
+    "default": 4000
+  },
+  "showArrows": {
+    "type": "boolean",
+    "default": true
+  },
+  "showDots": {
+    "type": "boolean",
+    "default": true
+  },
+  "fullHeight": {
+    "type": "boolean",
+    "default": true
+  },
+  "mediumHeight": {
+    "type": "boolean",
+    "default": false
+  }
+},
+
+  "editorScript": "megamall-blocks",
+  "script": "megamall-blocks",
+  "render": "file:./render.php",
+  "style": "file:./style.css"
+}
