@@ -3,6 +3,7 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://www.megamall.ae/wp-content/uploads/favicon.ico" rel="icon" type="image/x-icon" />
     <?php wp_head(); ?>
 </head>
 

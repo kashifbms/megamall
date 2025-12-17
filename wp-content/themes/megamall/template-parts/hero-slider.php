@@ -31,7 +31,7 @@ $height = get_query_var('mm_hero_height', 'full');
                     </div>
 
                     <div class="mm-hero-info-text">
-                        Mon - Thu: 10AM to 10PM
+                        Mon - Thu: 10AM to 10PM<br>
                         Fri - Sun: 10:00AM to 12:00AM
                     </div>
                 </div>
@@ -41,7 +41,7 @@ $height = get_query_var('mm_hero_height', 'full');
                         <span class="mm-hero-info-icon">
                             <img src="<?php echo site_url(); ?>/wp-content/themes/megamall/assets/images/akar-icons_location.svg">
                         </span>
-                        <span class="mm-hero-info-title">Ground Floor</span>
+                        <span class="mm-hero-info-title">Mall Location</span>
                     </div>
 
                     <div class="mm-hero-info-link-wrapper">

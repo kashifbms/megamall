@@ -173,3 +173,8 @@ add_action('wp_enqueue_scripts', function () {
 add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
 });
+function allow_ico_uploads($mimes) {
+    $mimes['ico'] = 'image/x-icon';
+    return $mimes;
+}
+add_filter('upload_mimes', 'allow_ico_uploads');

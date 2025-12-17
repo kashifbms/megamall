@@ -93,6 +93,23 @@ document.addEventListener('DOMContentLoaded', function () {
         );
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.mm-shop-swiper', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.mm-shop-next',
+            prevEl: '.mm-shop-prev'
+        },
+        breakpoints: {
+            0: { slidesPerView: 1.2 },
+            768: { slidesPerView: 2.2 },
+            1024: { slidesPerView: 4 }
+        }
+    });
+});
+
 </script>
 
 </body>
