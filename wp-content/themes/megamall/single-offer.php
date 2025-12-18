@@ -28,10 +28,10 @@ if ($offer_expiry) {
 
     if ($expiry_timestamp < $today_timestamp) {
         $label = 'Offer Expired';
-        $label_class = 'expired';
+        $label_class = 'is-past';
     } else {
         $label = 'Offer Active';
-        $label_class = 'active';
+        $label_class = 'is-ongoing';
     }
 
     
@@ -59,7 +59,7 @@ if ($offer_expiry) {
         <div class="mm-event-header">
             <h1 class="mm-event-title"><?php the_title(); ?></h1>
 
-            <span class="mm-event-status <?php echo $label ? 'is-ongoing' : 'is-active'; ?>">
+            <span class="mm-event-status <?php echo $label_class ?>">
             <?php echo $label; ?>
             </span>
         </div>
