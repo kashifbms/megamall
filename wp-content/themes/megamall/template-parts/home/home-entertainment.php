@@ -2,14 +2,26 @@
 $tenants = new WP_Query([
     'post_type'      => 'tenant',
     'posts_per_page' => 10,
+    'tax_query'      => [
+        [
+            'taxonomy' => 'tenant_category',
+            'field'    => 'slug', // or 'term_id'
+            'terms'    => ['entertainment'],
+        ]
+    ],
     'post_status'    => 'publish'
 ]);
 ?>
 <style>
-    .mm-home-shop-text{
-        background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home_top_bg.png');
+    .entertainment_wrapper .mm-home-shop-text{
+        background-image: none;
         background-repeat: no-repeat;
         background-position: top center;
+    }
+    .single-enter-item{
+        background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home-entertainment-bg.png');
+        background-repeat: no-repeat;
+        background-position: top right;
     }
 </style>
 <section class="mm-home-shop">
@@ -19,51 +31,33 @@ $tenants = new WP_Query([
         <div class="mm-home-shop-header">
             <div class="mm-home-shop-text">
                 <span class="mm-section-label">ABOUT US</span>
-                <h2 class="mm-section-title">SHOP</h2>
+                <h2 class="mm-section-title">ENTERTAINMENT</h2>
 
                 <p class="mm-section-description">
-                    Mega Mall is your one-stop destination for an expansive selection of the best brands in clothing,
-                    fashion accessories, beauty, home collections, interiors and more. With its fashion-forward
-                    collection and eclectic pop-up shops, Mega Mall delivers a dynamic shopping experience that will
-                    make you come back for more.
+                    Mega Mall offers more than shopping — from cinemas to family attractions, it’s a place where fun, warmth, and excitement come together.
                 </p>
-                <div class="flex_btns_link">
-                    <a href="<?php echo esc_url(home_url('/tenants')); ?>"
-                    class="mm-btn mm-btn-primary">
-                        View All Brands →
-                    </a>
-                    <div class="mm-home-shop-nav">
-                        <div class="mm-shop-prev next_prev_btns">&#10094;</div>
-                        <div class="mm-shop-next next_prev_btns">&#10095;</div>
-                    </div>
-                </div>
-                
             </div>
-
-            
         </div>
         
 
         <!-- Carousel -->
         <?php if ($tenants->have_posts()): ?>
-            <div class="swiper mm-shop-swiper">
-                <div class="swiper-wrapper">
+            <div class="home-entertainment-wrapper">
+                <div class="single-column-wrapper">
 
                     <?php while ($tenants->have_posts()): $tenants->the_post(); ?>
-                        <div class="swiper-slide">
-                            <a href="<?php the_permalink(); ?>" class="mm-shop-card">
+                        <div class="single-enter-item">
+                            <div class="image-column">
+                                <?php if (has_post_thumbnail()): ?>
+                                    <?php the_post_thumbnail('medium_large'); ?>
+                                <?php endif; ?>
+                            </div>
 
-                                <div class="mm-shop-image">
-                                    <?php if (has_post_thumbnail()): ?>
-                                        <?php the_post_thumbnail('medium_large'); ?>
-                                    <?php endif; ?>
-                                </div>
-
-                                <div class="mm-shop-name">
-                                    <?php the_title(); ?>
-                                </div>
-
-                            </a>
+                            <div class="text-column">
+                                <h3><?php the_title(); ?></h3>
+                                <p><?php echo wp_trim_words(get_the_content(), 20, '...'); ?></p>
+                                <a href="<?php the_permalink(); ?>" class="">Read More →</a>
+                            </div>
                         </div>
                     <?php endwhile; ?>
 

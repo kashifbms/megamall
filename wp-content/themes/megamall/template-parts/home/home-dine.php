@@ -29,7 +29,7 @@ $tenants = new WP_Query([
                 <h2 class="mm-section-title">DINE</h2>
 
                 <p class="mm-section-description">
-                    Complementing the region's eclectic and diverse culture, Dubai Mega Mall offers restaurants and eateries featuring the very best international cuisine in a vibrant and dynamic setting. 
+                    At Mega Mall, good food brings people together. Enjoy a rich mix of restaurants and cafés serving everything from global cuisines to comfort favorites.
                 </p>
                 <div class="flex_btns_link" style="justify-content: flex-end;">
                     <a style="display: none;" href="<?php echo esc_url(home_url('/tenants')); ?>"

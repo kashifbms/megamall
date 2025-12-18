@@ -26,6 +26,11 @@ get_header('single');
     <?php
     // ACF fields (YOUR EXISTING ONES)
     $header_image = get_field('tenant_header_image');
+    
+    $header_image_url = $header_image
+    ? wp_get_attachment_url($header_image)
+    : site_url('/wp-content/themes/megamall/assets/images/tenant_header1.png');
+
     $carousel     = get_field('tenant_carousel_images');
     $phone        = get_field('tenant_phone');
     $email        = get_field('tenant_email');
@@ -44,12 +49,12 @@ get_header('single');
                     <?php endforeach; ?>
                 </div>
 
-            <?php elseif ($header_image): ?>
+            <?php elseif ($header_image_url): ?>
                 <img class="tenant-header-image"
-                     src="<?php echo esc_url(wp_get_attachment_url($header_image)); ?>"
+                     src="<?php echo esc_url($header_image_url); ?>"
                      alt="">
             <?php endif; ?>
-
+        
         </div>
     </section>
 

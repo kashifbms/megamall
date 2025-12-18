@@ -19,7 +19,6 @@ get_header();
         <div class="full_width_image">
             <a href="<?php echo site_url('tenants'); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home_frame1.png" alt="Mega Mall Mid Image"></a>
         </div>
-        
     </div>
     
     
@@ -29,7 +28,15 @@ get_header();
 <div class="dine_full_width dine_wrapper">
     <div class="content_wrapper">
         <?php get_template_part('template-parts/home/home-dine'); ?>
+    </div>
 </div>
 
-<div class="content_wrapper"></div>
+<div class="content_wrapper entertainment_wrapper">
+     <?php get_template_part('template-parts/home/home-entertainment'); ?>
+</div>
+<div class="dine_full_width dine_wrapper">
+    <div class="content_wrapper">
+        <?php get_template_part('template-parts/home/home-grow'); ?>
+    </div>
+</div>
 <?php get_footer(); ?>

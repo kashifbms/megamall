@@ -30,10 +30,7 @@ $tenants = new WP_Query([
                 <h2 class="mm-section-title">SHOP</h2>
 
                 <p class="mm-section-description">
-                    Mega Mall is your one-stop destination for an expansive selection of the best brands in clothing,
-                    fashion accessories, beauty, home collections, interiors and more. With its fashion-forward
-                    collection and eclectic pop-up shops, Mega Mall delivers a dynamic shopping experience that will
-                    make you come back for more.
+                    Explore a world of choice at Mega Mall Sharjah, home to the latest trends in fashion, beauty, and lifestyle for every taste and generation.
                 </p>
                 <div class="flex_btns_link">
                     <a href="<?php echo esc_url(home_url('/tenants')); ?>"

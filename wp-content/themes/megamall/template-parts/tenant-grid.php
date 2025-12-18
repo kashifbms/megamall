@@ -42,9 +42,9 @@ $categories = get_terms([
     <div class="container">
 
         <!-- TITLE -->
-        <h1 class="mm-section-title">OUR SHOPS</h1>
+        <h1 class="mm-section-title">Mega shopping experience for everyone</h1>
         <p class="mm-section-desc">
-            Mega Mall has a fine blend of the most popular international, regional, and local brands
+            At Mega Mall Sharjah, shopping is all about choice and style. With a curated mix of popular fashion, beauty, and lifestyle brands, it’s the perfect destination for trend seekers and families alike, blending international names with local favorites to create a truly unique retail experience.
         </p>
 
         <!-- FILTERS -->

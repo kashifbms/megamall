@@ -17,6 +17,7 @@ class MegaMallCore {
         add_action('init', [$this, 'register_cpt_offers']);
         add_action('init', [$this, 'register_cpt_events']);
         add_action('init', [$this, 'register_cpt_services']);
+        add_action('init', [$this, 'register_cpt_grow']);
 
         // Register taxonomies
         add_action('init', [$this, 'register_tax_tenant_category']);
@@ -211,6 +212,29 @@ class MegaMallCore {
     }
 
     // ===============================
+    // GROW WITH US CPT
+    // ===============================
+    public function register_cpt_grow() {
+        $labels = [
+            'name' => 'Grows',
+            'singular_name' => 'Grow',
+        ];
+
+        $args = [
+            'labels' => $labels,
+            'public' => true,
+            'menu_icon' => 'dashicons-admin-tools',
+            'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+            'has_archive' => true,
+            'rewrite' => ['slug' => 'grow'],
+            'show_in_rest' => true,
+            'supports' => ['title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'],
+        ];
+
+        register_post_type('grow', $args);
+    }
+
+    // ===============================
     // TENANT CATEGORY TAXONOMY
     // ===============================
     public function register_tax_tenant_category() {
@@ -237,14 +261,15 @@ class MegaMallCore {
     // ===============================
     // FLUSH REWRITE RULES ON ACTIVATE
     // ===============================
-    public function flush_rewrite() {
-        $this->register_cpt_tenants();
-        $this->register_cpt_offers();
-        $this->register_cpt_events();
-        $this->register_cpt_services();
-        $this->register_tax_tenant_category();
-        flush_rewrite_rules();
-    }
+    // public function flush_rewrite() {
+    //     $this->register_cpt_tenants();
+    //     $this->register_cpt_offers();
+    //     $this->register_cpt_events();
+    //     $this->register_cpt_services();
+    //     $this->register_cpt_grow();
+    //     $this->register_tax_tenant_category();
+    //     flush_rewrite_rules();
+    // }
 }
 
 new MegaMallCore();

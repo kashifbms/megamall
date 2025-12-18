@@ -7,5 +7,6 @@
 /wp-content/debug.log
 /wp-content/uploads/debug.log
 wp-config.php
+.htaccess
 /.idea/
 # WordPress core files
