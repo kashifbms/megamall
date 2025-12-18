@@ -43,7 +43,33 @@ if ($offer_brande_id) {
 
       <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>
+        
+        <?php
+            // Get expiry date for THIS post
+            $offer_expiry = get_field('offer_expiry_date');
+            $formatted_date = '';
 
+            
+            $formatted_date = DateTime::createFromFormat('Y-m-d', $offer_expiry)
+                              ->format('j M, Y');
+            
+
+            // Get brand data for THIS post
+            $offer_brand_id = get_field('offer_tenant');
+            $offer_brand_name = '';
+            $brand_logo_url = '';
+
+            if ($offer_brand_id) {
+                $offer_brand_name = get_the_title($offer_brand_id);
+
+                $brand_logo = get_field('brand_logo', $offer_brand_id);
+                if (is_array($brand_logo) && isset($brand_logo['url'])) {
+                    $brand_logo_url = $brand_logo['url'];
+                } elseif (is_string($brand_logo)) {
+                    $brand_logo_url = $brand_logo;
+                }
+            }
+        ?>
           
 
           <article class="mm-event-card">
@@ -58,8 +84,17 @@ if ($offer_brande_id) {
               </div>
                
               <div class="mm-event-card__meta">
-                <p class="offer_expiry_date">Last Date: <span><?php echo $formatted_date; ?></span></p>
-                <img class="offer_brand_logo" src="<?php echo esc_url($brand_logo); ?>" alt="<?php echo esc_attr($offer_brande_name); ?>">
+                <?php if ($formatted_date) : ?>
+                  <p class="offer_expiry_date">
+                      Last Date: <span><?php echo esc_html($formatted_date); ?></span>
+                  </p>
+                <?php endif; ?>
+                <?php if ($brand_logo_url) : ?>
+                  <img class="offer_brand_logo"
+                     src="<?php echo esc_url($brand_logo_url); ?>"
+                     alt="<?php echo esc_attr($offer_brand_name); ?>">
+                <?php endif; ?>
+                
 
               </div>
               <h2 class="mm-event-card__title"><?php the_title(); ?></h2>         
