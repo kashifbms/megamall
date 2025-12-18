@@ -1222,6 +1222,7 @@ header.single_tenant_header .mm-menu li a {
   display: grid;
   grid-template-columns: 1fr 360px;
   gap: 48px;
+  margin-top: 20px;
 }
 
 /* Header */
@@ -1232,7 +1233,7 @@ header.single_tenant_header .mm-menu li a {
 }
 
 .mm-event-title {
-  font-size: clamp(32px, 4vw, 56px);
+  font-size: 40px;
   font-weight: 500;
   margin: 0;
 }
