@@ -133,7 +133,7 @@ $offers = new WP_Query([
             <?php while ($offers->have_posts()): $offers->the_post(); ?>
 
                 <article class="mm-offer-card">
-                    <a href="#">
+                    <a href="<?php the_permalink(); ?>" aria-label="<?php the_title_attribute(); ?>">
 
                         <?php if (has_post_thumbnail()): ?>
                             <div class="mm-offer-image">
@@ -142,8 +142,14 @@ $offers = new WP_Query([
                         <?php endif; ?>
 
                         <?php if ($end_date = get_field('offer_expiry_date')): ?>
+                           <?php 
+                            if ($end_date) {
+                                $formatted_date = DateTime::createFromFormat('Y-m-d', $end_date)
+                                    ->format('j M, Y');
+                            }
+                            ?> 
                             <span class="mm-offer-date">
-                                Last Date: <span><?php echo esc_html($end_date); ?></span>
+                                Last Date: <span><?php echo esc_html($formatted_date); ?></span>
                             </span>
                         <?php endif; ?>
 

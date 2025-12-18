@@ -1107,6 +1107,7 @@ header.single_tenant_header .mm-menu li a {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-transform: uppercase;
 }
 
 /* Subtle hover */
@@ -1362,4 +1363,40 @@ header.single_tenant_header .mm-menu li a {
   .mm-event-title {
     font-size: 32px;
   }
+}
+.offer_expiry_date{
+    font-size: 14px;
+    color: #667085;
+    margin: 0;
+        font-weight: 600;
+}
+.offer_expiry_date span{
+    background: #A42E80;
+    color: #fff;
+    border-radius: 10px;
+    padding: 3px 12px;
+}
+.offer_text{
+    font-size: 16px;
+    color: #A42E80;
+    margin-top: 10px;
+}
+.offer_text p{
+    margin: 0;
+    font-weight: 500;
+}
+.offers_archive .mm-event-card__meta{
+    justify-content: space-between;
+}
+.offer_brand_logo{
+    max-width: 65px;
+}
+.offer_logooffer_brand_logo_single{
+    max-width: 75px;
+}
+.single-offer-page .mm-event-meta{
+    grid-template-columns: repeat(2, 1fr);
+}
+.single-offer-page .mm-event-meta .mm-event-meta-item:last-of-type{
+    text-align: right;;
 }

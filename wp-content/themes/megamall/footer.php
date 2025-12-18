@@ -98,6 +98,11 @@ document.addEventListener('DOMContentLoaded', function () {
     new Swiper('.mm-shop-swiper', {
         slidesPerView: 4,
         spaceBetween: 20,
+        observer: true,
+        observeParents: true,
+        autoplay: {
+            delay: 4000,
+        },
         navigation: {
             nextEl: '.mm-shop-next',
             prevEl: '.mm-shop-prev'

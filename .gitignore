@@ -9,4 +9,5 @@
 wp-config.php
 .htaccess
 /.idea/
+/mall_images/
 # WordPress core files
